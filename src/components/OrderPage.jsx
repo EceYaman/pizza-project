@@ -1,9 +1,12 @@
-import OrderForm from "./OrderForm";
-
+import {Header} from "./Header";
+import {Main} from "./Main";
+import OrderCompletion from "./OrderCompletion";
 export default function OrderPage() {
     return(
         <>
-        <OrderForm />
+        <Header />
+        <Main />
+        <OrderCompletion />
         </>
     )
 }

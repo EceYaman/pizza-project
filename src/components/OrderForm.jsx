@@ -35,8 +35,8 @@ export default function OrderForm() {
 
     return (
         <div className="order-form">
-        <Form>
-            <Row form className="form-row">
+        <Form >
+            <Row >
             <Col md={6}>
                 <FormGroup>
                 <Label>Boyut Seç</Label>
@@ -122,7 +122,6 @@ export default function OrderForm() {
                 placeholder="Siparişine eklemek istediğin bir not var mı?"
             />
             </FormGroup>
-            
         </Form>
         </div>
     );
