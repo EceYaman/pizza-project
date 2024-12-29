@@ -1,7 +1,48 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+    font-family: 'Barlow', sans-serif !important;
+    height: 100%;        
+    margin: 0;            
+    padding: 0;           
+    overflow: hidden;     
+ 
 }
+
+.home-page {
+    background-image: url('/images/iteration-1-images/home-banner.png');
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;             
+    width: 100%;               
+    display: flex;             
+    align-items: center;       
+    text-align: center;       
+    flex-direction: column;    
+    position: absolute;        
+    top: 0;                    
+    left: 0;  
+    padding-top: 60px;                 
+}
+
+
+.home-logo {
+    max-width: 300px;         
+    margin-bottom: 20px;      
+}
+
+
+.home-title {
+    max-width: 530px; 
+    color: white;
+    font-size: 60px;          
+    margin-bottom: 20px;   
+    font-weight: lighter;    
+}
+.home-button {
+    width: 150px;
+}
+
+
 
 .header {
     width: 100%;
@@ -10,13 +51,20 @@ body {
     color: white;
     text-align: center;
 }
-.header h1 {
-    margin: 0;
-    font-size: 36px;
+
+.form-title {
     font-weight: bold;
+    font-size: 18px;
+}
+
+.required {
+    color: #CE2829;
+    font-size: 1.2rem;
+    margin-left: 5px;
 }
 
 .main-content {
+    font-family: 'Barlow', sans-serif;
     width: 45%;
     max-width: 100%;
     padding: 20px;
@@ -27,9 +75,14 @@ body {
 
 .description {
     margin-bottom: 40px;
+    line-height: 1.8;
+    font-family: 'Barlow', sans-serif;
+    text-align: justify;
+    color: #5F5F5F;
 }
 
 .order-form {
+    font-family: 'Barlow', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: stretch; 
@@ -47,22 +100,29 @@ body {
     align-items: center;  
     margin-top: 10px;
 }
-
+.pizza-info h4 {
+    margin-bottom: 30px;
+    font-weight: bold;  
+}
+.pizza-info h3 {
+    font-weight: bold;  
+}
 .info {
+    color: #5F5F5F;
     display: flex;
     justify-content: flex-end;  
     align-items: center;  
+    gap: 20px;
 }
 
-.info p {
-    margin: 0 15px;  
-}
 
 .radio-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 40px;
+    gap: 10px;
+    
 }
 
 .ingredients-grid {
@@ -71,12 +131,15 @@ body {
     gap: 15px;
     margin-top: 10px;
     margin-bottom: 40px;
+    color: #5F5F5F;
+    font-weight: bold;
 }
 
 .form-text {
     display: block;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    
 }
 
 .order-completion {
@@ -104,28 +167,26 @@ body {
 
 
 .card-body {
-    margin: 0 50px 20px 50px;
+    margin: 0 30px 20px 30px;
+    font-size: 18px;
+    font-weight: bold; 
+    line-height: 2;
 }
 
 
 .card-title {
+    font-weight: bold ; 
     font-size: 20px;
-    margin: 40px 60px 0 60px;
+    margin: 40px;
+    margin-bottom: 0;
 }
 
-.order-summary-row {
-    display: flex;
-    justify-content: space-between;
+.order-selection {
+    color: #5F5F5F;
 }
 
-.price-description {
-    text-align: left;
-    font-size: 16px;
-}
-
-.order-price {
-    text-align: right;
-    font-size: 16px;
+.order-total { 
+    color: #CE2829;
 }
 
 
@@ -135,12 +196,6 @@ body {
     height: 60px;
     margin-top: 0;
     margin-left: auto;
-    
-}
-
-
-.bold {
-    font-weight: bold;
 }
 
 .divider {
@@ -152,6 +207,7 @@ body {
 
 
 .btn {
+    font-weight: bold !important;
     background-color: #FDC913 !important;
     color: black !important; 
     cursor: pointer !important;
@@ -171,5 +227,7 @@ body {
     background-color: #f8c300 !important; 
     border: none !important;
 }
+
+
 
 

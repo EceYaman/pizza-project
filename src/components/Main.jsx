@@ -6,7 +6,7 @@ export function Main() {
             <div className="pizza-info">
                 <h4>Position Absolute Acı Pizza</h4>
                 <div className="price-info">
-                    <h3 className="bold">85.50₺</h3>
+                    <h3>85.50₺</h3>
                     <div className="info">
                         <p>4.9</p>
                         <p>(200)</p>

@@ -39,7 +39,7 @@ export default function OrderForm() {
             <Row >
             <Col md={6}>
                 <FormGroup>
-                <Label>Boyut Seç</Label>
+                <Label className='form-title'>Boyut Seç <span className="required">*</span> </Label>
                 <div className="radio-group">
                     <FormGroup check>
                     <Label check>
@@ -76,7 +76,7 @@ export default function OrderForm() {
             </Col>
             <Col md={6}>
                 <FormGroup>
-                <Label>Hamur Seç</Label>
+                <Label className='form-title'>Hamur Seç <span className="required">*</span> </Label>
                 <Input
                     type="select"
                     value={doughThickness}
@@ -92,8 +92,8 @@ export default function OrderForm() {
             </Row>
 
             <FormGroup>
-            <Label htmlFor="extraIngredients">Ek Malzemeler</Label>
-            <FormText color="muted" className="form-text">
+            <Label className='form-title' htmlFor="extraIngredients">Ek Malzemeler</Label>
+            <FormText className="form-text">
                 En fazla 10 malzeme seçebilirsiniz. 5₺
             </FormText>
             <div className="ingredients-grid">
@@ -114,7 +114,7 @@ export default function OrderForm() {
             </FormGroup>
 
             <FormGroup>
-            <Label htmlFor="orderNote">Sipariş Notu</Label>
+            <Label className='form-title' htmlFor="orderNote">Sipariş Notu</Label>
             <Input
                 id="orderNote"
                 name="orderNote"

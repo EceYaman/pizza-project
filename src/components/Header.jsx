@@ -1,9 +1,8 @@
-
 export  function Header() {
     return(
         
         <div className="header">
-            <h1>Teknolojik Yemekler</h1>
+            <img src="/images/iteration-1-images/logo.svg" alt="Logo" />
         </div>
         
     )
