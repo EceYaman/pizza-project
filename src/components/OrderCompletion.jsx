@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Button, ButtonGroup, Card, CardBody, CardTitle, Col, Row } from 'reactstrap'
-export  function OrderCompletion() {
+
+export  function OrderCompletion({handleOrderComplete}) {
     const [count, setCount] = useState(1)
     const handleIncrease = () => setCount(count + 1);
     const handleDecrease = () => {
@@ -30,7 +31,7 @@ export  function OrderCompletion() {
                     </Row>
                 </CardBody>
             </Card>
-            <Button className="order-button" >
+            <Button className="order-button" onClick={handleOrderComplete}>
                 SİPARİŞ VER
             </Button>
         </div>

@@ -1,6 +1,6 @@
 import { OrderCompletion } from "./OrderCompletion";
 import OrderForm from "./OrderForm";
-export function Main() {
+export function Main({handleOrderComplete}) {
     return(
         <div className="main-content">
             <div className="pizza-info">
@@ -18,7 +18,7 @@ export function Main() {
             </div>
             <OrderForm />
             <hr className="divider" />
-            <OrderCompletion />
+            <OrderCompletion handleOrderComplete = {handleOrderComplete} />
         </div>
     )
 }
