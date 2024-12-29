@@ -18,7 +18,6 @@ export default function OrderForm() {
             if (prevSelected.length < 10) {
             return [...prevSelected, value];
             } else {
-            alert('En fazla 10 malzeme seçebilirsiniz.');
             return prevSelected;
             }
         });
@@ -111,6 +110,16 @@ export default function OrderForm() {
                 </FormGroup>
                 ))}
             </div>
+            </FormGroup>
+
+            <FormGroup>
+            <Label className='form-title' htmlFor="name">Ad-Soyad</Label>
+            <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Adınız - Soyadınız"
+            />
             </FormGroup>
 
             <FormGroup>
