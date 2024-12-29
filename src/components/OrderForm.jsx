@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, FormGroup, Label, Input, Button, Col, FormText, Row } from 'reactstrap';
+import { OrderCompletion } from './OrderCompletion';
+
 
 const ingredients = [
     'Pepperoni', 'Sosis', 'Kanada Jambonu', 'Tavuk Izgara', 'Soğan',
@@ -7,9 +9,22 @@ const ingredients = [
     'Ananas', 'Kabak'
 ];
 
-export default function OrderForm() {
+export default function OrderForm({handleSubmit}) {
     const [selectedIngredients, setSelectedIngredients] = useState([]);
     const [doughThickness, setDoughThickness] = useState('');
+    const [name, setName] = useState('');
+    const [size, setSize] = useState('');
+    const [specialNote, setSpecialNote] = useState('');
+    const [isValid, setIsValid] = useState(false);
+
+    useEffect(() => {
+        const valid =
+            name.length >= 3 && 
+            selectedIngredients.length >= 4 && selectedIngredients.length <= 10 && 
+            doughThickness && 
+            size;
+        setIsValid(valid); 
+    }, [name, selectedIngredients, doughThickness, size]);
 
     const handleChange = (event) => {
         const { value, checked } = event.target;
@@ -28,10 +43,23 @@ export default function OrderForm() {
         }
     };
 
-    const handleDoughChange = (event) => {
-        setDoughThickness(event.target.value);
-    };
+    const handleDoughChange = (event) => setDoughThickness(event.target.value);
+    const handleSizeChange = (event) => setSize(event.target.value);
+    const handleSpecialNoteChange = (event) => setSpecialNote(event.target.value);
 
+
+    const handleSubmitForm = () => {
+        const orderData = {
+          isim: name,
+          boyut: size,
+          malzemeler: selectedIngredients,
+          ozel: specialNote,
+          hamur: doughThickness
+        };
+        handleSubmit(orderData); 
+      };
+    
+    
     return (
         <div className="order-form">
         <Form >
@@ -46,6 +74,7 @@ export default function OrderForm() {
                         type="radio"
                         name="size"
                         value="small"
+                        onChange={handleSizeChange}
                         />
                         Küçük
                     </Label>
@@ -56,6 +85,7 @@ export default function OrderForm() {
                         type="radio"
                         name="size"
                         value="medium"
+                        onChange={handleSizeChange}
                         />
                         Orta
                     </Label>
@@ -66,6 +96,7 @@ export default function OrderForm() {
                         type="radio"
                         name="size"
                         value="large"
+                        onChange={handleSizeChange}
                         />
                         Büyük
                     </Label>
@@ -119,6 +150,8 @@ export default function OrderForm() {
                 name="name"
                 type="text"
                 placeholder="Adınız - Soyadınız"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
             />
             </FormGroup>
 
@@ -129,9 +162,13 @@ export default function OrderForm() {
                 name="orderNote"
                 type="textarea"
                 placeholder="Siparişine eklemek istediğin bir not var mı?"
+                value={specialNote}
+                onChange={handleSpecialNoteChange}
             />
             </FormGroup>
         </Form>
+        <hr className="divider" />
+        <OrderCompletion handleSubmitForm={handleSubmitForm} isValid={isValid} />
         </div>
     );
 }

@@ -1,14 +1,12 @@
 import {Header} from "./Header";
 import {Main} from "./Main";
 
-export default function OrderPage({ setIsOrderPage, setIsOrderSuccess }) {
-    const handleOrderComplete = () => {
-        setIsOrderSuccess(true);  
-    }
+export default function OrderPage({ setIsOrderPage, handleSubmit}) {
+    
     return(
         <div>
         <Header setIsOrderPage={setIsOrderPage} />
-        <Main handleOrderComplete ={handleOrderComplete}/>
+        <Main handleSubmit ={handleSubmit}/>
         </div>
     )
 }
