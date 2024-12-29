@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button, ButtonGroup, Card, CardBody, CardTitle, Col, Row } from 'reactstrap'
-export default function OrderCompletion() {
+export  function OrderCompletion() {
     const [count, setCount] = useState(1)
     const handleIncrease = () => setCount(count + 1);
     const handleDecrease = () => {
@@ -9,31 +9,30 @@ export default function OrderCompletion() {
         }
       };
     return (
-        <>
-            <ButtonGroup>
+        <div className="order-completion">
+            <ButtonGroup className="count-button">
                 <Button onClick={handleDecrease}>-</Button>
                 <Button disabled>{count}</Button>
                 <Button onClick={handleIncrease}>+</Button>
             </ButtonGroup>
 
-            <Card>
-                <CardTitle className="text-center">Sipariş Toplamı</CardTitle>
-                <CardBody>
-                    <Row className="mb-3">
-                        <Col xs="8" className="text-left">Seçimler</Col>
-                        <Col xs="4" className="text-right">0 TL</Col>
+            <Card className="card">
+                <CardTitle className="card-title">Sipariş Toplamı</CardTitle>
+                <CardBody className="card-body">
+                    <Row className="order-summary-row">
+                        <Col className="price-description">Seçimler</Col>
+                        <Col className="order-price">0 TL</Col>
                     </Row>
 
-                    <Row className="mb-3">
-                        <Col xs="8" className="text-left">Toplam</Col>
-                        <Col xs="4" className="text-right">0 TL</Col>
+                    <Row className="order-summary-row">
+                        <Col className="price-description">Toplam</Col>
+                        <Col className="order-price">0 TL</Col>
                     </Row>
-
-                    <Button color="primary" block>
-                        Sipariş Ver
-                    </Button>
                 </CardBody>
             </Card>
-        </>
+            <Button className="order-button" >
+                Sipariş Ver
+            </Button>
+        </div>
     );
 }
