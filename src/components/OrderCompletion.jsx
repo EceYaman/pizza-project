@@ -31,7 +31,7 @@ export  function OrderCompletion({isValid, handleSubmitForm}) {
                     </Row>
                 </CardBody>
             </Card>
-            <Button className="order-button" onClick={handleSubmitForm} disabled={!isValid}>
+            <Button className="order-button" onClick={handleSubmitForm} disabled={!isValid} data-cy="submit-button">
                 SİPARİŞ VER
             </Button>
         </div>

@@ -75,6 +75,7 @@ export default function OrderForm({handleSubmit}) {
                         name="size"
                         value="small"
                         onChange={handleSizeChange}
+                        data-cy="small-input"
                         />
                         Küçük
                     </Label>
@@ -86,6 +87,7 @@ export default function OrderForm({handleSubmit}) {
                         name="size"
                         value="medium"
                         onChange={handleSizeChange}
+                        data-cy="medium-input"
                         />
                         Orta
                     </Label>
@@ -97,6 +99,7 @@ export default function OrderForm({handleSubmit}) {
                         name="size"
                         value="large"
                         onChange={handleSizeChange}
+                        data-cy="large-input"
                         />
                         Büyük
                     </Label>
@@ -111,6 +114,7 @@ export default function OrderForm({handleSubmit}) {
                     type="select"
                     value={doughThickness}
                     onChange={handleDoughChange}
+                    data-cy="dough-input"
                 >
                     <option value="" disabled hidden>Hamur Kalınlığı</option>
                     <option value="thin">İnce</option>
@@ -135,6 +139,7 @@ export default function OrderForm({handleSubmit}) {
                         value={ingredient}
                         onChange={handleChange}
                         checked={selectedIngredients.includes(ingredient)}
+                         data-cy="ingredient-input"
                     />
                     {ingredient}
                     </Label>
@@ -152,6 +157,7 @@ export default function OrderForm({handleSubmit}) {
                 placeholder="Adınız - Soyadınız"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                data-cy="name-input"
             />
             </FormGroup>
 
@@ -164,6 +170,7 @@ export default function OrderForm({handleSubmit}) {
                 placeholder="Siparişine eklemek istediğin bir not var mı?"
                 value={specialNote}
                 onChange={handleSpecialNoteChange}
+                data-cy="note-input"
             />
             </FormGroup>
         </Form>
