@@ -11,10 +11,10 @@ export  function OrderCompletion({isValid, handleSubmitForm}) {
       };
     return (
         <div className="order-completion">
-            <ButtonGroup className="count-button">
-                <Button onClick={handleDecrease}>-</Button>
-                <Button disabled >{count}</Button>
-                <Button onClick={handleIncrease}>+</Button>
+            <ButtonGroup className="count-group">
+                <Button className="count-button" onClick={handleDecrease}>-</Button>
+                <Button className="count">{count}</Button>
+                <Button className="count-button" onClick={handleIncrease}>+</Button>
             </ButtonGroup>
 
             <Card className="card">

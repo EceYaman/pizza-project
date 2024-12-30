@@ -1,0 +1,46 @@
+.success-page {
+    background-color: #CE2829;
+    background-size: cover;    
+    min-height: 100vh;             
+    width: 100%;               
+    display: flex;             
+    align-items: center;       
+    text-align: center;       
+    flex-direction: column;    
+    position: absolute; 
+    gap: 9.5rem;       
+    top: 0;                    
+    left: 0;  
+    padding-top: 3rem;                 
+}
+
+.success-logo {
+    max-width: 60%;         
+    margin-bottom: 1.5rem;      
+}
+
+.success-title {
+    max-width: 33rem; 
+    color: white;
+    font-size: 3.5rem;          
+    margin-bottom: 1.2rem;   
+    font-weight: lighter;    
+}
+
+@media (max-width: 768px) {
+    .success-page {
+        height: auto; 
+        padding-top: 1.8rem; 
+    }
+
+    .success-title {
+        font-size: 3rem; 
+        max-width: 80%; 
+        margin-bottom: 1rem;
+        line-height: 4rem;
+    }
+
+    .success-logo {
+        max-width: 50%; 
+    }
+}

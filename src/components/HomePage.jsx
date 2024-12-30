@@ -1,4 +1,5 @@
 import { Button } from 'reactstrap'
+import "./HomePage.css"
 export function HomePage({ setIsOrderPage }) {
     return(
         <div className="home-page">

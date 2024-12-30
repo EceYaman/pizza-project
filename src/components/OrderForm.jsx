@@ -64,7 +64,7 @@ export default function OrderForm({handleSubmit}) {
         <div className="order-form">
         <Form >
             <Row >
-            <Col md={6}>
+            <Col>
                 <FormGroup>
                 <Label className='form-title'>Boyut Seç <span className="required">*</span> </Label>
                 <div className="radio-group">
@@ -104,7 +104,7 @@ export default function OrderForm({handleSubmit}) {
                 </div>
                 </FormGroup>
             </Col>
-            <Col md={6}>
+            <Col>
                 <FormGroup>
                 <Label className='form-title'>Hamur Seç <span className="required">*</span> </Label>
                 <Input

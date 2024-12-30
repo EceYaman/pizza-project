@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css'
 import { HomePage } from './components/HomePage'
-import "./components/Layout.css"
 import OrderPage from './components/OrderPage'
 import { SuccessPage } from './components/SuccessPage';
 import axios from 'axios';

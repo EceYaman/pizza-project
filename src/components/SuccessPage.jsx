@@ -1,3 +1,4 @@
+import "./SuccessPage.css"
 export function SuccessPage() {
     return(
         <div className="success-page">
