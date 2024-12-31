@@ -8,12 +8,14 @@ import axios from 'axios';
 function App() {
   const [isOrderPage, setIsOrderPage] = useState(false);
   const [isOrderSuccess, setIsOrderSuccess] = useState(false); 
+  const [data, setData] = useState({})
 
   const handleSubmit = async (orderData) => {
     try {
         const response = await axios.post('https://reqres.in/api/pizza', orderData);
         console.log(response.data); 
-        setIsOrderSuccess(true);  
+        setIsOrderSuccess(true); 
+        setData(response.data);
     } catch (error) {
         console.error(error); 
     }
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
       {isOrderSuccess ? (
-        <SuccessPage />  
+        <SuccessPage data={data}/>  
       ) : isOrderPage ? (
         <OrderPage setIsOrderPage={setIsOrderPage} handleSubmit={handleSubmit} />  
       ) : (

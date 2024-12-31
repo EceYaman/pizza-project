@@ -149,10 +149,16 @@ nav a:hover {
     margin-left: 1rem;
 }
 .order-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
     color: #5F5F5F;
 }
 
 .order-total { 
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
     color: #CE2829;
 }
 
@@ -253,6 +259,18 @@ nav a:hover {
         width: 100%;
         margin-left: auto;  
         padding: 1rem;
+    }
+
+    .order-selection {
+        display: flex;
+        justify-content: space-between;
+        gap: 12rem;
+    }
+    
+    .order-total { 
+        display: flex;
+        justify-content: space-between;
+        gap: 12.2rem;
     }
 
     .order-completion .order-button {

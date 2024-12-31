@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Form, FormGroup, Label, Input, Button, Col, FormText, Row } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Col, FormText, Row, FormFeedback } from 'reactstrap';
 import { OrderCompletion } from './OrderCompletion';
 
 
@@ -16,6 +16,8 @@ export default function OrderForm({handleSubmit}) {
     const [size, setSize] = useState('');
     const [specialNote, setSpecialNote] = useState('');
     const [isValid, setIsValid] = useState(false);
+    const [cost, setCost] = useState(85.5)
+    const [ingredientsCost, setIngredientsCost] = useState(0)
 
     useEffect(() => {
         const valid =
@@ -23,8 +25,10 @@ export default function OrderForm({handleSubmit}) {
             selectedIngredients.length >= 4 && selectedIngredients.length <= 10 && 
             doughThickness && 
             size;
-        setIsValid(valid); 
-    }, [name, selectedIngredients, doughThickness, size]);
+            setIsValid(valid); 
+            setIngredientsCost(selectedIngredients.length * 5)
+            setCost(85.5 + selectedIngredients.length * 5);
+        }, [name, selectedIngredients, doughThickness, size]);
 
     const handleChange = (event) => {
         const { value, checked } = event.target;
@@ -47,14 +51,23 @@ export default function OrderForm({handleSubmit}) {
     const handleSizeChange = (event) => setSize(event.target.value);
     const handleSpecialNoteChange = (event) => setSpecialNote(event.target.value);
 
+    const errors = {
+        size: "Boyut Seçilmeli!",
+        dough: "Hamur Seçilmeli!",
+        ingredients:"En az 4 Adet Seçilmeli!",
+        name: "En az 3 karakter girmelisiniz!"
+    }
 
     const handleSubmitForm = () => {
         const orderData = {
-          isim: name,
-          boyut: size,
-          malzemeler: selectedIngredients,
-          ozel: specialNote,
-          hamur: doughThickness
+            urun: "Position Absolute Acı Pizza",
+            isim: name,
+            boyut: size,
+            malzemeler: selectedIngredients,
+            ozel: specialNote,
+            hamur: doughThickness,
+            ekstra: ingredientsCost,
+            fiyat: cost
         };
         handleSubmit(orderData); 
       };
@@ -73,9 +86,10 @@ export default function OrderForm({handleSubmit}) {
                         <Input
                         type="radio"
                         name="size"
-                        value="small"
+                        value="Küçük"
                         onChange={handleSizeChange}
                         data-cy="small-input"
+                        invalid={size === ''}
                         />
                         Küçük
                     </Label>
@@ -85,9 +99,10 @@ export default function OrderForm({handleSubmit}) {
                         <Input
                         type="radio"
                         name="size"
-                        value="medium"
+                        value="Orta"
                         onChange={handleSizeChange}
                         data-cy="medium-input"
+                        invalid={size === ''}
                         />
                         Orta
                     </Label>
@@ -97,12 +112,14 @@ export default function OrderForm({handleSubmit}) {
                         <Input
                         type="radio"
                         name="size"
-                        value="large"
+                        value="Büyük"
                         onChange={handleSizeChange}
                         data-cy="large-input"
+                        invalid={size === ''}
                         />
                         Büyük
                     </Label>
+                    {size === '' && <FormFeedback>{errors.size}</FormFeedback>}
                     </FormGroup>
                 </div>
                 </FormGroup>
@@ -115,12 +132,14 @@ export default function OrderForm({handleSubmit}) {
                     value={doughThickness}
                     onChange={handleDoughChange}
                     data-cy="dough-input"
+                    invalid={doughThickness === ''}
                 >
                     <option value="" disabled hidden>Hamur Kalınlığı</option>
-                    <option value="thin">İnce</option>
-                    <option value="medium">Orta</option>
-                    <option value="thick">Kalın</option>
+                    <option value="İnce">İnce</option>
+                    <option value="Orta">Orta</option>
+                    <option value="Kalın">Kalın</option>
                 </Input>
+                <FormFeedback>{errors.dough}</FormFeedback>
                 </FormGroup>
             </Col>
             </Row>
@@ -140,9 +159,11 @@ export default function OrderForm({handleSubmit}) {
                         onChange={handleChange}
                         checked={selectedIngredients.includes(ingredient)}
                          data-cy="ingredient-input"
+                         invalid={selectedIngredients.length < 4}
                     />
                     {ingredient}
                     </Label>
+                    <FormFeedback>{errors.ingredients}</FormFeedback>
                 </FormGroup>
                 ))}
             </div>
@@ -158,7 +179,9 @@ export default function OrderForm({handleSubmit}) {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 data-cy="name-input"
+                invalid={name.length < 3}
             />
+            <FormFeedback>{errors.name}</FormFeedback>
             </FormGroup>
 
             <FormGroup>
@@ -175,7 +198,7 @@ export default function OrderForm({handleSubmit}) {
             </FormGroup>
         </Form>
         <hr className="divider" />
-        <OrderCompletion handleSubmitForm={handleSubmitForm} isValid={isValid} />
+        <OrderCompletion handleSubmitForm={handleSubmitForm} isValid={isValid} cost={cost} ingredientsCost={ingredientsCost} />
         </div>
     );
 }
