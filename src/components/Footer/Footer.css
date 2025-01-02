@@ -11,10 +11,11 @@
     width: 75%;
     justify-content: space-around;
     margin-left: 12rem;
-   
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
 }
 .contact-info{
-    padding: 1.5rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -36,13 +37,14 @@
 }
 
 .footer-menu{
-    padding: 2rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-.menu-title{
+.footer .menu-title{
     font-size: 1rem;
+    margin-top: 1.2rem;
 }
 .footer-menu .footer-nav{
     margin-top: 1rem;
@@ -59,14 +61,15 @@
     font-weight: lighter;
 }
 .footer-social{
-    padding: 2rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-.social-title{
+.footer .social-title{
     font-size: 1rem;
     margin-bottom: 1.8rem;
+    margin-top: 1.2rem;
 }
 .insta-photo{
     max-width: 100%;
@@ -84,4 +87,75 @@
     gap: 14rem;
     font-weight: lighter;
     font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .footer{
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 4rem;
+       
+    }
+    .contact-info{
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    .location{
+        width: 1rem;
+    }
+    .mail{
+        width: 1rem;
+    }
+    .phone{
+        width: 1rem;
+    }
+    .footer-logo{
+        width: 8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .footer-menu{
+        padding: 0
+    }
+    .footer .menu-title{
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .footer-menu .footer-nav{
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .footer-menu .footer-nav a{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .footer-social{
+        padding: 0;
+    }
+    .footer .social-title{
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .insta-photo{
+        width: 50%;
+        gap: 0.6rem;
+    }
+    .photo{
+        width: 6rem;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: space-around;
+        gap: 6rem;
+        font-size: 0.8rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+    
+
 }

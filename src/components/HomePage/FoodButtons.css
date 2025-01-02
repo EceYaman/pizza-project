@@ -20,3 +20,19 @@
 .button-img{
     width: 1.5rem;
 }
+
+@media (max-width: 768px) {
+    .food-buttons{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; 
+    }
+
+    .food-buttons .food-btn {
+        font-size: 1.1rem;
+        padding: 0.8rem ;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

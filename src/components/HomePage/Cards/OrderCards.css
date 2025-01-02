@@ -17,6 +17,7 @@
     margin-left: 0;
     width: 29rem;
     border: none;
+    padding: 2rem;
 }
 .order-cards .card-2{
     background-size: cover;    
@@ -25,6 +26,7 @@
     background-image: url('/images/iteration-2-images/cta/kart-2.png');
     width: 32rem;
     border: none;
+    padding: 2rem;
 }
 .order-cards .card-3{
     background-size: cover;    
@@ -33,6 +35,7 @@
     background-image: url('/images/iteration-2-images/cta/kart-3.png');
     width: 32rem;
     border: none;
+    padding: 2rem;
 }
 .order-cards .card-btn{
     background-color: white;
@@ -74,4 +77,58 @@
 }
 .title-highlight{
     color: #CE2829;
+}
+
+@media (max-width: 768px) {
+    .order-cards{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .cards-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .order-cards .card-1{
+        margin-left: 0;
+        width: 26rem;
+        padding: 1.5rem;
+    }
+    .order-cards .card-2{
+        width: 26rem;
+        padding: 1.5rem;
+    }
+    .order-cards .card-3{
+        padding: 1.5rem;
+        width: 26rem;
+        
+    }
+    .order-cards .card-btn{
+        width: 6rem;
+        font-size: 0.8rem;
+    }
+    .card-1-title{
+        font-size: 2.4rem;
+        width: 12rem;
+    }
+    .card-1-title-2{
+        font-size: 0.9rem;
+        width: 12rem;
+        margin-bottom: 1rem;
+    }
+    .card-2-title{
+        width: 11rem;
+        font-size: 1.4rem;
+        margin-bottom: 2.5rem;
+    }
+    .card-3-title{
+        width: 11rem;
+        font-size: 1.4rem;
+        margin-bottom: 2.5rem;
+    }
+
 }

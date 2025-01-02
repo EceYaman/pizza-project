@@ -147,7 +147,7 @@ export default function OrderForm({handleSubmit}) {
                     invalid={doughThickness === ''}
                     className="dough-select"
                 >
-                    <option value="" disabled hidden>-Hamur Kalınlığı Seç-</option>
+                    <option value="" disabled hidden>-Hamur Kalınlığı-</option>
                     <option value="İnce">İnce</option>
                     <option value="Orta">Orta</option>
                     <option value="Kalın">Kalın</option>

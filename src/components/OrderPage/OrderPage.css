@@ -125,7 +125,6 @@ nav a:hover {
     gap: 1.25rem;
 }
 
-
 .radio-group {
     display: flex;
     flex-direction: column;
@@ -168,7 +167,6 @@ nav a:hover {
     gap: 0.5rem;
 }
 
-
 .radio-group {
     display: flex;
     gap: 0.8rem; 
@@ -176,12 +174,10 @@ nav a:hover {
     align-items: flex-start; 
 }
 
-
 .size-option input[type="radio"] {
     position: absolute;
     opacity: 0; 
 }
-
 
 .radio-label {
     display: flex;
@@ -212,7 +208,6 @@ nav a:hover {
 .order-form .order-note{
     background-color: #FAF7F2;
 }
-
 
 .label-text {
     position: absolute;
@@ -312,19 +307,27 @@ nav a:hover {
 }
 
 
-
-
 @media (max-width: 768px) {
-    .header {
-        padding: 0.6rem;
-    }
-
-    .logo {
+    .header .logo {
         width: 16rem;
         margin: 0.8rem;
     }
-
-    nav {
+    .main {
+        max-width: 100%;
+    }
+    
+    .main-content{
+        margin-top: 0;
+        max-width: 100%;
+        min-height: 100vh;             
+        width: 100%;  
+    }
+    .form-banner{
+        margin-top: 0;
+        margin-bottom: 2.5rem;
+        width: 85%;
+    }
+    .order-page .main .order-page-menu {
         width: 85%;
         display: flex;
         justify-content: flex-start; 
@@ -332,14 +335,21 @@ nav a:hover {
         font-size: 1rem;
     }
     
-    nav a {
+    .order-page .main .order-page-menu a  {
         font-size: 1rem;
-        text-decoration: none; 
-        color: white; 
-        cursor: pointer;
-        font-weight: lighter;
     }
-    
+    .pizza-info {
+        margin-top: 1.5rem;
+        text-align: left;
+        width: 85%;
+    }
+
+    .order-form {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        width: 85%; 
+    }
+
     .form-title {
         font-size: 1rem;
     }
@@ -349,16 +359,14 @@ nav a:hover {
         margin-left: 0.1rem;
     }
 
-    .main-content {
-        width: 90%;
-        padding: 6rem 1rem;
-    }
-
     .ingredients-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .card {
+    .order-form .ingredient-checkbox {
+        width: 2rem; 
+        height: 2rem; 
+      }
+    .order-completion .card {
         order: 1; 
         width: 100%;
         margin-left: auto;  
@@ -397,12 +405,12 @@ nav a:hover {
         margin-top: 0.8rem;
     }
 
-    .card-body {
+    .order-page .card-body {
         font-size: 1rem;
     }
 
-    .card-title {
-        font-size: 1.2rem;
+    .order-page .card-title {
+        font-size: 1.1rem;
         margin-left: 1rem;
     }
 

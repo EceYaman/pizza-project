@@ -1,9 +1,11 @@
+import { Footer } from "../Footer/Footer"
 import { Header } from "../Header"
 import "./SuccessPage.css"
 import { Card, CardBody, CardTitle, Col, Row } from 'reactstrap'
 export function SuccessPage({data}) {
     return(
         <div className="success-page">
+        <div className="success-content">
             <Header />
             <h5>lezzetin yolda</h5>
             <h1>SİPARİŞ ALINDI</h1>
@@ -27,6 +29,8 @@ export function SuccessPage({data}) {
                     </Row>
                 </CardBody>
             </Card>
+        </div>
+        <Footer />
         </div>
     )
 }
