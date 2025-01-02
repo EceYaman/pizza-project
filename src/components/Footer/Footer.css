@@ -44,15 +44,18 @@
 .menu-title{
     font-size: 1rem;
 }
-.footer-nav{
+.footer-menu .footer-nav{
     margin-top: 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.footer-nav a{
+.footer-menu .footer-nav a{
+    font-family: "Barlow", sans-serif;
+    color: white;
+    text-decoration: none; 
     font-size: 0.8rem;
-    line-height: 0.8rem;
+    line-height: 1.5rem;
     font-weight: lighter;
 }
 .footer-social{

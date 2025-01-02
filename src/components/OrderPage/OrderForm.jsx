@@ -78,54 +78,66 @@ export default function OrderForm({handleSubmit}) {
         <Form >
             <Row >
             <Col>
-                <FormGroup>
+            <FormGroup className="size-select-group">
                 <Label className='form-title'>Boyut Seç <span className="required">*</span> </Label>
                 <div className="radio-group">
-                    <FormGroup check>
-                    <Label check>
-                        <Input
-                        type="radio"
-                        name="size"
-                        value="Küçük"
-                        onChange={handleSizeChange}
-                        data-cy="small-input"
-                        invalid={size === ''}
-                        />
-                        Küçük
-                    </Label>
+                    <FormGroup check className="size-option">
+                        <Label check 
+                        className="radio-label"
+                        style={{ backgroundColor: size === 'S' ? '#FDC913' : '' }}
+                        >
+                            <Input
+                                type="radio"
+                                name="size"
+                                value="S"
+                                onChange={handleSizeChange}
+                                data-cy="small-input"
+                                invalid={size === ''}
+                                className="size-radio"
+                            />
+                            <span className="label-text">S</span>
+                        </Label>
                     </FormGroup>
-                    <FormGroup check>
-                    <Label check>
-                        <Input
-                        type="radio"
-                        name="size"
-                        value="Orta"
-                        onChange={handleSizeChange}
-                        data-cy="medium-input"
-                        invalid={size === ''}
-                        />
-                        Orta
-                    </Label>
+                    <FormGroup check className="size-option">
+                        <Label check 
+                        className="radio-label"
+                        style={{ backgroundColor: size === 'M' ? '#FDC913' : '' }}
+                        >
+                            <Input
+                                type="radio"
+                                name="size"
+                                value="M"
+                                onChange={handleSizeChange}
+                                data-cy="medium-input"
+                                invalid={size === ''}
+                                className="size-radio"
+                            />
+                            <span className="label-text">M</span>
+                        </Label>
                     </FormGroup>
-                    <FormGroup check>
-                    <Label check>
-                        <Input
-                        type="radio"
-                        name="size"
-                        value="Büyük"
-                        onChange={handleSizeChange}
-                        data-cy="large-input"
-                        invalid={size === ''}
-                        />
-                        Büyük
-                    </Label>
-                    {size === '' && <FormFeedback>{errors.size}</FormFeedback>}
+                    <FormGroup check className="size-option">
+                        <Label check 
+                        className="radio-label"
+                        style={{ backgroundColor: size === 'L' ? '#FDC913' : '' }}
+                        >
+                            <Input
+                                type="radio"
+                                name="size"
+                                value="L"
+                                onChange={handleSizeChange}
+                                data-cy="large-input"
+                                invalid={size === ''}
+                                className="size-radio"
+                            />
+                            <span className="label-text">L</span>
+                        </Label>
+                        {size === '' && <FormFeedback>{errors.size}</FormFeedback>}
                     </FormGroup>
                 </div>
-                </FormGroup>
+            </FormGroup>
             </Col>
             <Col>
-                <FormGroup>
+                <FormGroup className="dough-select-group">
                 <Label className='form-title'>Hamur Seç <span className="required">*</span> </Label>
                 <Input
                     type="select"
@@ -133,8 +145,9 @@ export default function OrderForm({handleSubmit}) {
                     onChange={handleDoughChange}
                     data-cy="dough-input"
                     invalid={doughThickness === ''}
+                    className="dough-select"
                 >
-                    <option value="" disabled hidden>Hamur Kalınlığı</option>
+                    <option value="" disabled hidden>-Hamur Kalınlığı Seç-</option>
                     <option value="İnce">İnce</option>
                     <option value="Orta">Orta</option>
                     <option value="Kalın">Kalın</option>
@@ -144,22 +157,23 @@ export default function OrderForm({handleSubmit}) {
             </Col>
             </Row>
 
-            <FormGroup>
+            <FormGroup className="ingredients-group">
             <Label className='form-title' htmlFor="extraIngredients">Ek Malzemeler</Label>
             <FormText className="form-text">
                 En fazla 10 malzeme seçebilirsiniz. 5₺
             </FormText>
             <div className="ingredients-grid">
                 {ingredients.map((ingredient, index) => (
-                <FormGroup check key={index}>
+                <FormGroup check key={index} className="ingredient-item">
                     <Label check>
                     <Input
                         type="checkbox"
                         value={ingredient}
                         onChange={handleChange}
                         checked={selectedIngredients.includes(ingredient)}
-                         data-cy="ingredient-input"
-                         invalid={selectedIngredients.length < 4}
+                        data-cy="ingredient-input"
+                        className="ingredient-checkbox"
+                        invalid={selectedIngredients.length < 4}
                     />
                     {ingredient}
                     </Label>
@@ -169,7 +183,7 @@ export default function OrderForm({handleSubmit}) {
             </div>
             </FormGroup>
 
-            <FormGroup>
+            <FormGroup className="name-group">
             <Label className='form-title' htmlFor="name">Ad-Soyad</Label>
             <Input
                 id="name"
@@ -180,11 +194,12 @@ export default function OrderForm({handleSubmit}) {
                 onChange={(e) => setName(e.target.value)}
                 data-cy="name-input"
                 invalid={name.length < 3}
+                className="name-input"
             />
             <FormFeedback>{errors.name}</FormFeedback>
             </FormGroup>
 
-            <FormGroup>
+            <FormGroup className="note-group">
             <Label className='form-title' htmlFor="orderNote">Sipariş Notu</Label>
             <Input
                 id="orderNote"
@@ -194,6 +209,7 @@ export default function OrderForm({handleSubmit}) {
                 value={specialNote}
                 onChange={handleSpecialNoteChange}
                 data-cy="note-input"
+                className="order-note"
             />
             </FormGroup>
         </Form>

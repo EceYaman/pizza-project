@@ -1,8 +1,12 @@
-.header {
-    width: 100%;
+.order-page { 
+    min-height: 100vh;             
+    width: 100%;               
     position: absolute;
-    top: 0;                    
-    left: 0;  
+    top: 0;   
+    left: 0;      
+}
+.header {
+    width: 100%; 
     background-color: #CE2829;
     padding: 1rem;
     color: white;
@@ -14,8 +18,35 @@
     margin: 1rem;
 }
 
-nav {
-    width: 35%;
+.main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    margin-top: 0;
+    background-color: #FAF7F2;
+    max-width: 100%;
+    background-color:  #FAF7F2;
+    min-height: 100vh;             
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-banner{
+    margin-top: 0;
+    margin-bottom: 4rem;
+    width: 40rem;
+}
+
+.order-page .main .order-page-menu {
+    width: 40%;
     max-width: 100%;
     display: flex;
     justify-content: flex-start; 
@@ -23,20 +54,21 @@ nav {
     margin:auto;
 }
 
-nav a {
+.order-page .main .order-page-menu a {
     font-size: 1rem;
     text-decoration: none; 
-    color: white; 
+    color: black; 
     cursor: pointer;
     font-weight: lighter;
 }
 
-nav a.active {
+.order-page .main .order-page-menu a.active {
+    color:#CE2829;
     font-weight: bold; 
   }
 
 nav a:hover {
-    color: black;
+    color:#CE2829;
 }
 
 .form-title {
@@ -50,14 +82,6 @@ nav a:hover {
     margin-left: 0.2rem;
 }
 
-.main-content {
-    width: 45%;
-    max-width: 100%;
-    text-align: left;
-    margin:auto;
-    padding: 8.5rem 1.2rem;
-}
-
 .description {
     margin-bottom: 2.5rem;
     line-height: 1.8;
@@ -66,16 +90,19 @@ nav a:hover {
 }
 
 .order-form {
+    margin-top: 2rem;
+    margin-bottom: 8rem;
     display: flex;
     flex-direction: column;
     align-items: stretch; 
-    width: 100%; 
+    width: 40%; 
     box-sizing: border-box; 
 }
 
 .pizza-info {
     margin-top: 2.5rem;
     text-align: left;
+    width: 40%;
 }
 
 .price-info {
@@ -118,6 +145,81 @@ nav a:hover {
     font-weight: bold;
 }
 
+.order-form .ingredient-checkbox {
+    width: 3rem; 
+    height: 3rem; 
+    background-color: #FAF7F2; 
+    border: none; 
+    cursor: pointer;
+  }
+  
+.order-form .ingredient-checkbox:checked {
+    background-color: #FDC913; 
+    border: none; 
+}
+  
+.order-form .ingredient-checkbox:hover {
+    transform: scale(1.1); 
+}
+ 
+.order-form .ingredients-grid label {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem;
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 0.8rem; 
+    flex-direction: row; 
+    align-items: flex-start; 
+}
+
+
+.size-option input[type="radio"] {
+    position: absolute;
+    opacity: 0; 
+}
+
+
+.radio-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.6rem; 
+    height: 2.6rem; 
+    background-color: #FAF7F2;
+    border:none;
+    border-radius: 50%;  
+    cursor: pointer;
+    position: relative;
+}
+
+.order-form .size-option.form-check {
+    padding: 0;
+}
+
+.radio-label:hover {
+    background-color: #FDC913; 
+}
+.order-form .dough-select {
+    background-color: #FAF7F2;
+}
+.order-form .name-input{
+    background-color: #FAF7F2;
+}
+.order-form .order-note{
+    background-color: #FAF7F2;
+}
+
+
+.label-text {
+    position: absolute;
+    font-size: 1rem;
+    color: #5F5F5F;
+}
+
 .form-text {
     display: block;
     margin-bottom: 2.5rem;
@@ -129,7 +231,8 @@ nav a:hover {
     flex-wrap: wrap;  
 }
 
-.card {
+.order-completion .card {
+    background-color: #FAF7F2;
     margin-left: auto;
     width: 65%;
     max-width: 100%;
@@ -189,16 +292,16 @@ nav a:hover {
 }
 
 .order-completion .count{
-    background-color: white; 
+    background-color: #FAF7F2; 
     color: black; 
-    border: 1px solid #5F5F5F;
+    border: none;
     cursor: not-allowed; 
 }
 
 .order-completion .count-group {
     width: 32%;
     max-width: 100%;
-    height: 3rem;
+    height: 3.5rem;
 }
 
 .order-completion .btn:disabled { 
@@ -207,6 +310,7 @@ nav a:hover {
     cursor: not-allowed; 
     border: none;
 }
+
 
 
 
