@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './App.css'
-import { HomePage } from './components/HomePage'
-import OrderPage from './components/OrderPage'
-import { SuccessPage } from './components/SuccessPage';
+import { HomePage } from './components/HomePage/HomePage'
+import OrderPage from './components/OrderPage/OrderPage'
+import { SuccessPage } from './components/SuccessPage/SuccessPage';
 import axios from 'axios';
 
 function App() {

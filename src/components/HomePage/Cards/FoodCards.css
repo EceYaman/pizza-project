@@ -1,0 +1,29 @@
+.food-cards{
+    max-width: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+.food-card{
+    background-color: white;
+    text-align: left;
+    padding: 1.2rem;
+}
+
+.food-name{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.card-text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.bold-text{
+    font-weight: bold;
+}

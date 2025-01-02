@@ -1,7 +1,12 @@
 import OrderForm from "./OrderForm";
-export function Main({handleSubmit}) {
+export function Main({handleSubmit, setIsOrderPage}) {
     return(
         <div className="main-content">
+            <nav>
+                <a href="#" onClick={() => setIsOrderPage(false)}>Anasayfa</a>
+                <span>-</span>
+                <a className="active" href="#" onClick={() => setIsOrderPage(true)}>Sipariş Oluştur</a>
+            </nav>
             <div className="pizza-info">
                 <h4>Position Absolute Acı Pizza</h4>
                 <div className="price-info">

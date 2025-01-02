@@ -1,0 +1,22 @@
+.food-buttons{
+    max-width: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.food-buttons .food-btn {
+    background-color: white;
+    color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3rem;
+    padding: 0.8rem 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.button-img{
+    width: 1.5rem;
+}

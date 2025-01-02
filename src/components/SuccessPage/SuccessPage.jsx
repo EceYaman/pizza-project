@@ -1,9 +1,10 @@
+import { Header } from "../Header"
 import "./SuccessPage.css"
 import { Card, CardBody, CardTitle, Col, Row } from 'reactstrap'
 export function SuccessPage({data}) {
     return(
         <div className="success-page">
-            <img src="/images/iteration-1-images/logo.svg" alt="Logo" className="success-logo" />
+            <Header />
             <h5>lezzetin yolda</h5>
             <h1>SİPARİŞ ALINDI</h1>
             <hr className="succes-divider" />

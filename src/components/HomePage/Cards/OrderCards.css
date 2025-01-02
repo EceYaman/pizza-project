@@ -1,0 +1,77 @@
+.order-cards{
+    max-width: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+.cards-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.order-cards .card-1{
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-image: url('/images/iteration-2-images/cta/kart-1.png');
+    margin-left: 0;
+    width: 29rem;
+    border: none;
+}
+.order-cards .card-2{
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-image: url('/images/iteration-2-images/cta/kart-2.png');
+    width: 32rem;
+    border: none;
+}
+.order-cards .card-3{
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-image: url('/images/iteration-2-images/cta/kart-3.png');
+    width: 32rem;
+    border: none;
+}
+.order-cards .card-btn{
+    background-color: white;
+    color: #CE2829;
+    border-radius: 8rem;
+    width: 7rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+}
+.card-1-title{
+    font-family: "Quattrocento", sans-serif;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: left;
+    width: 12rem;
+}
+.card-1-title-2{
+    color: white;
+    font-size: 0.9rem;
+    text-align: left;
+    width: 12rem;
+    margin-bottom: 1.5rem;
+}
+.card-2-title{
+    width: 11rem;
+    font-size: 1.6rem;
+    text-align: left;
+    color: white;
+    margin-bottom: 2rem;
+}
+.card-3-title{
+    width: 11rem;
+    font-size: 1.6rem;
+    text-align: left;
+    color: black;
+    margin-bottom: 2rem;
+}
+.title-highlight{
+    color: #CE2829;
+}

@@ -13,11 +13,6 @@
     left: 0;             
 }
 
-.success-logo {
-    max-width: 100%;
-    width: 18%;         
-    margin: 1.5rem;      
-}
 
 .success-page h5 {
     font-family: 'Satisfy', sans-serif; 
@@ -106,10 +101,6 @@
         flex-direction: column;                
     }
     
-    .success-logo {
-        width: 40%;         
-        margin: 1rem;      
-    }
     
     .success-page h5 {
         font-size: 1.2rem;          

@@ -1,0 +1,84 @@
+.footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 1.5rem;
+    
+}
+.footer-content{
+    display: flex;
+    max-width: 100%;
+    width: 75%;
+    justify-content: space-around;
+    margin-left: 12rem;
+   
+}
+.contact-info{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.8rem;
+}
+.location{
+    width: 1.2rem;
+}
+.mail{
+    width: 1.2rem;
+}
+.phone{
+    width: 1.2rem;
+}
+.footer-logo{
+    max-width: 100%;
+    width: 8rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-menu{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.menu-title{
+    font-size: 1rem;
+}
+.footer-nav{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-nav a{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: lighter;
+}
+.footer-social{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.social-title{
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+}
+.insta-photo{
+    max-width: 100%;
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem; 
+}
+.photo{
+    width: 3.5rem;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-around;
+    gap: 14rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
