@@ -1,7 +1,9 @@
 import { useState } from "react"
+import { useHistory } from "react-router-dom";
 import { Button, ButtonGroup, Card, CardBody, CardTitle, Col, Row } from 'reactstrap'
 
 export  function OrderCompletion({isValid, handleSubmitForm, cost, ingredientsCost}) {
+    const history = useHistory(); 
     const [count, setCount] = useState(1)
     const handleIncrease = () => setCount(count + 1);
     const handleDecrease = () => {
@@ -9,6 +11,12 @@ export  function OrderCompletion({isValid, handleSubmitForm, cost, ingredientsCo
           setCount(count - 1);
         }
       };
+
+    const handleSubmitAndNavigate = () => {
+        handleSubmitForm();  
+        history.push('/success');  
+    };
+
     return (
         <div className="order-completion">
             <ButtonGroup className="count-group">
@@ -31,7 +39,7 @@ export  function OrderCompletion({isValid, handleSubmitForm, cost, ingredientsCo
                     </Row>
                 </CardBody>
             </Card>
-            <Button className="order-button" onClick={handleSubmitForm} disabled={!isValid} data-cy="submit-button">
+            <Button className="order-button" onClick={handleSubmitAndNavigate} disabled={!isValid} data-cy="submit-button">
                 SİPARİŞ VER
             </Button>
         </div>

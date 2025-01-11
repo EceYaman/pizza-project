@@ -1,13 +1,13 @@
 import OrderForm from "./OrderForm";
-export function Main({handleSubmit, setIsOrderPage}) {
+export function Main({handleSubmit}) {
     return(
         <div className="main">
             <div className="main-content">
                 <img className="form-banner" src="./images/iteration-2-images/pictures/form-banner.png"/>
                 <nav className="order-page-menu">
-                    <a href="#" onClick={() => setIsOrderPage(false)}>Anasayfa</a>
+                    <a href="/" >Anasayfa</a>
                     <span>-</span>
-                    <a className="active" href="#" onClick={() => setIsOrderPage(true)}>Sipariş Oluştur</a>
+                    <a className="active" href="/order">Sipariş Oluştur</a>
                 </nav>
                 <div className="pizza-info">
                     <h4>Position Absolute Acı Pizza</h4>

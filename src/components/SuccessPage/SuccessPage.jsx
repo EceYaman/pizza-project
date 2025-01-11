@@ -14,7 +14,7 @@ export function SuccessPage({data}) {
             <ul className="order-details">
                 <li>Boyut: <strong>{data.boyut}</strong></li>
                 <li>Hamur: <strong>{data.hamur}</strong></li>
-                <li>Ek Malzemeler: <strong>{data.malzemeler.join(", ")}</strong></li>
+                <li>Ek Malzemeler: <strong>{data.malzemeler}</strong></li>
             </ul>
             <Card className="order-card">
                 <CardTitle className="orderCard-title">Sipariş Toplamı</CardTitle>

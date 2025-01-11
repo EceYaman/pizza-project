@@ -4,17 +4,15 @@ import { HomePage } from './components/HomePage/HomePage'
 import OrderPage from './components/OrderPage/OrderPage'
 import { SuccessPage } from './components/SuccessPage/SuccessPage';
 import axios from 'axios';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
-  const [isOrderPage, setIsOrderPage] = useState(false);
-  const [isOrderSuccess, setIsOrderSuccess] = useState(false); 
   const [data, setData] = useState({})
 
   const handleSubmit = async (orderData) => {
     try {
         const response = await axios.post('https://reqres.in/api/pizza', orderData);
         console.log(response.data); 
-        setIsOrderSuccess(true); 
         setData(response.data);
     } catch (error) {
         console.error(error); 
@@ -23,13 +21,11 @@ function App() {
 
   return (
     <>
-      {isOrderSuccess ? (
-        <SuccessPage data={data}/>  
-      ) : isOrderPage ? (
-        <OrderPage setIsOrderPage={setIsOrderPage} handleSubmit={handleSubmit} />  
-      ) : (
-        <HomePage setIsOrderPage={setIsOrderPage} /> 
-      )}
+      <Switch>
+        <Route path="/" exact><HomePage /></Route> 
+        <Route path="/order"><OrderPage  handleSubmit={handleSubmit} />  </Route> 
+        <Route path="/success"><SuccessPage data={data}/></Route> 
+      </Switch>
     </>
   )
 }

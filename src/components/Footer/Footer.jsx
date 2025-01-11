@@ -1,5 +1,5 @@
 import './Footer.css'
-export function Footer({setIsOrderPage}) {
+export function Footer() {
     return(
         <div className="footer">
             <div className='footer-content'>
@@ -19,12 +19,12 @@ export function Footer({setIsOrderPage}) {
                 <div className="footer-menu">
                     <h6 className='menu-title'>Sıcacık Menüler</h6>
                     <nav className="footer-nav">
-                        <a href="#" onClick={() => setIsOrderPage(true)}>Terminal Pizza</a>
-                        <a href="#" onClick={() => setIsOrderPage(true)}>5 Kişilik Hackathlon Pizza</a>
-                        <a href="#" onClick={() => setIsOrderPage(true)}>useEffect Pizza</a>
-                        <a href="#" onClick={() => setIsOrderPage(true)}>Beyaz Console Frosty</a>
-                        <a href="#" onClick={() => setIsOrderPage(true)}>Testler Geçti Mutlu Burger</a>
-                        <a href="#" onClick={() => setIsOrderPage(true)}>Position Absolute Acı Burger</a>
+                        <a href="/order" >Terminal Pizza</a>
+                        <a href="/order" >5 Kişilik Hackathlon Pizza</a>
+                        <a href="/order" >useEffect Pizza</a>
+                        <a href="/order" >Beyaz Console Frosty</a>
+                        <a href="/order" >Testler Geçti Mutlu Burger</a>
+                        <a href="/order" >Position Absolute Acı Burger</a>
                     </nav>
                 </div>
                 <div className='footer-social'>

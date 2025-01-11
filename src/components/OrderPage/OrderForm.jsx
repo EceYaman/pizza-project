@@ -63,7 +63,7 @@ export default function OrderForm({handleSubmit}) {
             urun: "Position Absolute Acı Pizza",
             isim: name,
             boyut: size,
-            malzemeler: selectedIngredients,
+            malzemeler: selectedIngredients.join(", "),
             ozel: specialNote,
             hamur: doughThickness,
             ekstra: ingredientsCost,
