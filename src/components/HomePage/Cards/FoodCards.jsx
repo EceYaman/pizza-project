@@ -2,19 +2,19 @@ import { Card } from "reactstrap";
 import "./FoodCards.css"
 export default function FoodCards() {
     const foods = [
-        {   img:"/images/iteration-2-images/pictures/food-1.png",
+        {   img:"/pictures/food-1.png",
             name:"Terminal Pizza",
             rating:"4.9",
             count:"200",
             price:"60₺"
         },
-        {   img:"/images/iteration-2-images/pictures/food-2.png",
+        {   img:"/pictures/food-2.png",
             name:"Position Absolute Acı Pizza",
             rating:"4.9",
             count:"928",
             price:"85₺"
         },
-        {   img:"/images/iteration-2-images/pictures/food-3.png",
+        {   img:"/pictures/food-3.png",
             name:"useEffect Tavuklu Burger",
             rating:"4.9",
             count:"462",

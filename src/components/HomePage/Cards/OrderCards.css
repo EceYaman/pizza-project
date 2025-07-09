@@ -13,7 +13,7 @@
     background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('/images/iteration-2-images/cta/kart-1.png');
+    background-image: url('/cta/kart-1.png');
     margin-left: 0;
     width: 29rem;
     border: none;
@@ -23,7 +23,7 @@
     background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('/images/iteration-2-images/cta/kart-2.png');
+    background-image: url('/cta/kart-2.png');
     width: 32rem;
     border: none;
     padding: 2rem;
@@ -32,7 +32,7 @@
     background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('/images/iteration-2-images/cta/kart-3.png');
+    background-image: url('/cta/kart-3.png');
     width: 32rem;
     border: none;
     padding: 2rem;

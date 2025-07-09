@@ -4,15 +4,15 @@ export function Footer() {
         <div className="footer">
             <div className='footer-content'>
                 <div className="contact-info">
-                    <img className="footer-logo" src="/images/iteration-2-images/footer/footer logo.png" alt="Logo" />
+                    <img className="footer-logo" src="/footer-logo.png" alt="Logo" />
                     <p>
-                        <img className="location" src="/images/iteration-2-images/footer/icons/icon-1.png" alt="location"/> 341 Londonderry Road, Istanbul Türkiye
+                        <img className="location" src="/icon-1.png" alt="location"/> 341 Londonderry Road, Istanbul Türkiye
                     </p>
                     <p>
-                        <img className="mail" src="/images/iteration-2-images/footer/icons/icon-2.png" alt="mail"/> aciktim@teknolojikyemekler.com
+                        <img className="mail" src="/icon-2.png" alt="mail"/> aciktim@teknolojikyemekler.com
                     </p>
                     <p>
-                        <img className="phone" src="/images/iteration-2-images/footer/icons/icon-3.png" alt="phone"/> +90 216 123 45 67
+                        <img className="phone" src="/icon-3.png" alt="phone"/> +90 216 123 45 67
                     </p>
                 </div>
                 
@@ -30,12 +30,12 @@ export function Footer() {
                 <div className='footer-social'>
                     <h6 className='social-title'>Instagram</h6>
                     <div className='insta-photo'>
-                        <img className="photo" src="/images/iteration-2-images/footer/insta/li-0.png" alt="insta-photo"/>
-                        <img className="photo" src="/images/iteration-2-images/footer/insta/li-1.png" alt="insta-photo"/>
-                        <img className="photo" src="/images/iteration-2-images/footer/insta/li-2.png" alt="insta-photo"/>
-                        <img className="photo" src="/images/iteration-2-images/footer/insta/li-3.png" alt="insta-photo"/>
-                        <img className="photo" src="/images/iteration-2-images/footer/insta/li-4.png" alt="insta-photo"/>
-                        <img className="photo" src="/images/iteration-2-images/footer/insta/li-5.png" alt="insta-photo"/>
+                        <img className="photo" src="/insta/li-0.png" alt="insta-photo"/>
+                        <img className="photo" src="/insta/li-1.png" alt="insta-photo"/>
+                        <img className="photo" src="/insta/li-2.png" alt="insta-photo"/>
+                        <img className="photo" src="/insta/li-3.png" alt="insta-photo"/>
+                        <img className="photo" src="/insta/li-4.png" alt="insta-photo"/>
+                        <img className="photo" src="/insta/li-5.png" alt="insta-photo"/>
                     </div>
                 </div>
             </div>

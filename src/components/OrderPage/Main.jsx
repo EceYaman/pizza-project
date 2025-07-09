@@ -3,7 +3,7 @@ export function Main({handleSubmit}) {
     return(
         <div className="main">
             <div className="main-content">
-                <img className="form-banner" src="./images/iteration-2-images/pictures/form-banner.png"/>
+                <img className="form-banner" src="/pictures/form-banner.png"/>
                 <nav className="order-page-menu">
                     <a href="/" >Anasayfa</a>
                     <span>-</span>

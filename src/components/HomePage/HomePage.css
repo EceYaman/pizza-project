@@ -11,7 +11,7 @@
 }
 
 .hero-content{
-    background-image: url('/images/iteration-1-images/home-banner.png');
+    background-image: url('/iteration-1-images/home-banner.png');
     background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat; 
