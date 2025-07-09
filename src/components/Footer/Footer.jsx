@@ -4,7 +4,7 @@ export function Footer() {
         <div className="footer">
             <div className='footer-content'>
                 <div className="contact-info">
-                    <img className="footer-logo" src="/images/iteration-2-images/footer/logo-footer.svg" alt="Logo" />
+                    <img className="footer-logo" src="/images/iteration-2-images/footer/footer logo.png" alt="Logo" />
                     <p>
                         <img className="location" src="/images/iteration-2-images/footer/icons/icon-1.png" alt="location"/> 341 Londonderry Road, Istanbul Türkiye
                     </p>
